@@ -23,9 +23,10 @@ def process_data(file_path):
             if len(data) == 3:
                 url, email, password = data
                 if check_login_details(url, email, password):
-                    print(f"Login successful for {url}")
-                else:
-                    print(f"Login failed for {url}")
+                    print(f"Valid login details found for URL: {url}")
+                    print(f"Username: {email}")
+                    print(f"Password: {password}")
+                    print()
             else:
                 print(f"Invalid data format: {line}")
 
